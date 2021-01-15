@@ -80,8 +80,8 @@ function draw(){
     
   
     console.log(player.y)
-  bg.velocityX=-3
-  ground.velocityX=-3
+  bg.velocityX=-15
+  ground.velocityX=-15
 
   spawnobstacle()
 
@@ -156,7 +156,7 @@ text ("Score: "+ score, 1200,100)
 
 function spawnobstacle() {
   //write code here to spawn the clouds
-  if (frameCount % 300 === 0) {
+  if (frameCount % 210 === 0) {
     var obstacle = createSprite(600,600,40,10);
     obstacle.debug = true;
     obstacle.setCollider("circle",0,0, 40)
@@ -164,7 +164,7 @@ function spawnobstacle() {
     obstacle.x = Math.round(random(100,1200));
     obstacle.addAnimation("obstacle",obstacleImage);
     obstacle.scale = 0.5;
-    obstacle.velocityX = -3;
+    obstacle.velocityX = -15;
     
      //assign lifetime to the variable
     obstacle.lifetime = 1000;
@@ -187,7 +187,7 @@ function spawncoins() {
 
     coin.addImage("coin",coinImage);
   coin.scale = 0.2;
-  coin.velocityX = -3;
+  coin.velocityX = -15;
     
      //assign lifetime to the variable
     coin.lifetime = 1000;
